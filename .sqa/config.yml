@@ -1,0 +1,80 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: main
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/onedata/oneclient:
+      branch: develop
+      repo: https://github.com/onedata/oneclient/
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/onedata/oneclient git:
+        commands:
+        - /usr/bin/env sh .sqa/script.gloppy-yellow-dog.sh
+        container: qc.acc_crabby-amethyst-budgerigar
+  QC.Doc:
+    repos:
+      github.com/onedata/oneclient find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-emerald-greyhound.sh
+        container: qc.doc_boozy-fuchsia-walrus
+      github.com/onedata/oneclient git:
+        commands:
+        - /usr/bin/env sh .sqa/script.chewy-wheat-angora.sh
+        container: qc.doc_beady-aqua-tarantula
+      github.com/onedata/oneclient markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.muzzy-asparagus-orangutan.sh
+        container: qc.doc_bumpy-vermilion-flamingo
+  QC.Lic:
+    repos:
+      github.com/onedata/oneclient licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.breezy-grey-sparrow.sh
+        container: qc.lic_shaky-amethyst-paradise
+  QC.Sec:
+    repos:
+      github.com/onedata/oneclient bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.flimsy-cream-robin.sh
+        container: qc.sec_frumpy-razzmatazz-affenpinscher
+      github.com/onedata/oneclient gosec:
+        commands:
+        - /usr/bin/env sh .sqa/script.skimpy-cinnamon-fowl.sh
+        container: qc.sec_muzzy-zucchini-flamingo
+  QC.Sty:
+    repos:
+      github.com/onedata/oneclient flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.trippy-myrtle-seal.sh
+        container: qc.sty_snappy-russet-kingfisher
+      github.com/onedata/oneclient jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.pretty-ultramarine-macaque.sh
+        container: qc.sty_sickly-emerald-wolfhound
+      github.com/onedata/oneclient oclint:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-tangerine-loon.sh
+        container: qc.sty_woolly-gamboge-quoll
+      github.com/onedata/oneclient staticcheck:
+        commands:
+        - /usr/bin/env sh .sqa/script.scanty-eggplant-quetzal.sh
+        container: qc.sty_craggy-buff-dolphin
+  QC.Uni:
+    repos:
+      github.com/onedata/oneclient pytest:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-amber-fousek.sh
+        container: qc.uni_sleepy-red-newt
+  QC.Ver:
+    repos:
+      github.com/onedata/oneclient get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.baggy-mauve-echidna.sh
+        container: qc.ver_skanky-fuchsia-numbat
+timeout: 5400
