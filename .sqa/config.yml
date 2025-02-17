@@ -15,66 +15,66 @@ sqa_criteria:
     repos:
       github.com/onedata/oneclient git:
         commands:
-        - /usr/bin/env sh .sqa/script.sleazy-corn-camel.sh
-        container: qc.acc_homey-buff-termite
+        - /usr/bin/env sh .sqa/script.surly-charcoal-dachshund.sh
+        container: qc.acc_gimpy-turquoise-vole
   QC.Doc:
     repos:
       github.com/onedata/oneclient find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.cozy-bistre-caterpillar.sh
-        container: qc.doc_sunny-firebrick-nightingale
+        - /usr/bin/env sh .sqa/script.pokey-fuchsia-chihuahua.sh
+        container: qc.doc_thirsty-auburn-magpie
       github.com/onedata/oneclient git:
         commands:
-        - /usr/bin/env sh .sqa/script.sickly-khaki-stingray.sh
-        container: qc.doc_cranky-lavender-axolotl
+        - /usr/bin/env sh .sqa/script.muggy-azure-seahorse.sh
+        container: qc.doc_blurry-pink-uguisu
       github.com/onedata/oneclient markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.goopy-emerald-ferret.sh
-        container: qc.doc_skinny-razzmatazz-eleuth
+        - /usr/bin/env sh .sqa/script.whiny-orchid-seal.sh
+        container: qc.doc_chewy-cardinal-hyrax
   QC.Lic:
     repos:
       github.com/onedata/oneclient licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.nippy-puce-ferret.sh
-        container: qc.lic_chummy-gold-foxhound
+        - /usr/bin/env sh .sqa/script.woozy-mustard-gharial.sh
+        container: qc.lic_cheeky-ecru-earwig
   QC.Sec:
     repos:
       github.com/onedata/oneclient bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.cloudy-cyan-alligator.sh
-        container: qc.sec_snoopy-apricot-coati
+        - /usr/bin/env sh .sqa/script.wiggy-myrtle-spitz.sh
+        container: qc.sec_thirsty-olive-rat
       github.com/onedata/oneclient gosec:
         commands:
-        - /usr/bin/env sh .sqa/script.bluesy-emerald-dingo.sh
-        container: qc.sec_crappy-alizarin-urchin
+        - /usr/bin/env sh .sqa/script.tasty-auburn-tarantula.sh
+        container: qc.sec_ugly-khaki-bongo
   QC.Sty:
     repos:
       github.com/onedata/oneclient flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.gummy-copper-monster.sh
-        container: qc.sty_stealthy-azure-kakapo
+        - /usr/bin/env sh .sqa/script.seedy-chestnut-terrier.sh
+        container: qc.sty_skanky-olive-hyena
       github.com/onedata/oneclient jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.ugly-fuchsia-ladybird.sh
-        container: qc.sty_messy-peach-ferret
+        - /usr/bin/env sh .sqa/script.sunny-ruby-sponge.sh
+        container: qc.sty_lousy-cerulean-orangutan
       github.com/onedata/oneclient oclint:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-saffron-rat.sh
-        container: qc.sty_crappy-heliotrope-javanese
+        - /usr/bin/env sh .sqa/script.flabby-rose-buffalo.sh
+        container: qc.sty_nerdy-cream-crab
       github.com/onedata/oneclient staticcheck:
         commands:
-        - /usr/bin/env sh .sqa/script.geeky-beige-havanese.sh
-        container: qc.sty_flimsy-azure-chipmunk
+        - /usr/bin/env sh .sqa/script.ready-harlequin-rattlesnake.sh
+        container: qc.sty_flabby-copper-robin
   QC.Uni:
     repos:
       github.com/onedata/oneclient pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.smelly-amethyst-numbat.sh
-        container: qc.uni_slimy-denim-fox
+        - /usr/bin/env sh .sqa/script.cranky-cerise-grasshopper.sh
+        container: qc.uni_wheezy-zucchini-hamster
   QC.Ver:
     repos:
       github.com/onedata/oneclient get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.paltry-brass-molly.sh
-        container: qc.ver_bumpy-copper-quokka
+        - /usr/bin/env sh .sqa/script.goopy-yellow-coral.sh
+        container: qc.ver_grumpy-khaki-dalmatian
 timeout: 5400
